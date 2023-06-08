@@ -35,7 +35,7 @@ public class Adventure {
             location = compute(userInput, RESULTS[location][0], RESULTS[location][1]);
 
             if (location == -1) {
-                System.out.println("You gave up");
+                System.out.println("You decide to go back but as you start walking back, the ground beneath you shimmers and fades away. You fall to your death.");
                 playing = false;
             } else if (location == 200) {
                 System.out.println("You find a treasure chest full of gold! Congrats");
