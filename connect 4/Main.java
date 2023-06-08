@@ -1,18 +1,23 @@
 import java.util.Scanner;
 public class Main {
     public static String input;
+
     private static int move;
     public static void main(String[] args) {
         int[] pos;
         Connect4Board board = new Connect4Board();
         boolean run = true;
+        boolean win = false;
         board.displayBoard();
         while(run){
             System.out.print("\033[H\033[2J");
             System.out.flush();
             pos = board.updateBoard(checker(), move % 2 == 0 ? 'x' : move % 2 == 1 ? 'o' : '?');
             board.displayBoard();
-            System.out.println(board.checkWin(pos[0],pos[1]));
+            win = board.checkWin(pos[0],pos[1]);
+            if(win){
+                run = false;
+            }
             move++;
         }
     }
