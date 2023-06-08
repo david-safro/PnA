@@ -1,0 +1,4 @@
+Write a program that reads in a file of alternating words and integers. 
+The program should then ask the user if they want to display the information in word order or number order. 
+Internally, sorting by word order should be done with insertion sort, and sorting by number order should be done with selection sort.
+
